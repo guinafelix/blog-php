@@ -12,7 +12,7 @@
     }
   }
 ?>
-  <main id="posts-container">
+  <main id="post-container">
     <div class="content-container">
       <h1 id="main-title">
         <?= $currentPost['title'] ?>
@@ -36,21 +36,22 @@
         In minima laboriosam perspiciatis porro nemo cumque, placeat sint eveniet nobis necessitatibus culpa delectus vel cum obcaecati magnam aperiam officia doloribus. Vero unde error officiis accusantium corrupti saepe, molestias et!
       </p>
     </div>
-  </main>
-  <aside id="nav-container">
-    <h3 id="tags-title">Tags</h3>
-    <ul id="tag-list" class="tags-container">
-      <?php foreach($currentPost['tags'] as $tag): ?>
-        <li><a href="#"> <?= $tag ?></a></li>
-      <?php endforeach; ?>
-    </ul>
-    <h3 id="categories-title">Categorias</h3>
-    <ul id="categories-list">
-      <?php foreach($categories as $category): ?>
-        <li><a href="#"> <?= $category ?></a></li>
-      <?php endforeach; ?>
-    </ul>
+    <aside id="nav-container">
+      <h3 id="tags-title">Tags</h3>
+      <ul id="tags-list" class="tags-container">
+        <?php foreach($currentPost['tags'] as $tag): ?>
+          <li><a href="#"> <?= $tag ?></a></li>
+        <?php endforeach; ?>
+      </ul>
+      <h3 id="categories-title">Categorias</h3>
+      <ul id="categories-list">
+        <?php foreach($categories as $category): ?>
+          <li><a href="#"> <?= $category ?></a></li>
+        <?php endforeach; ?>
+      </ul>
   </aside>
+  </main>
+
 <?php
   include_once("templates/footer.php")
 ?>
